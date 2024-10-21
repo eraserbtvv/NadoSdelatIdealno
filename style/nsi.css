@@ -1,0 +1,86 @@
+@import url(../fonts/nsi-fonts.css);
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    height: inherit;
+    min-width: 800px;
+    min-height: 600px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    height: 370px;
+}
+
+.title {
+    font-weight: bold;
+    padding: 10px;
+    white-space: pre-line;
+    text-align: center;
+    font-size: 5.5em;
+    z-index: 1;
+}
+
+.title::after {
+    content: "*";
+}
+
+.video {
+    position: static;
+    margin-top: -370px;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.title span {
+text-transform: uppercase;
+}
+
+.title:hover::before {
+    position: absolute;
+    right: 20px;
+    top: 150px;
+    padding: 10px 20px;
+    text-decoration: none;
+    content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
+    white-space: pre;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 18px;
+    font-weight: normal;
+    box-shadow: 3px 5px 5px black;
+}
+
+.title:hover + .overlay {
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
