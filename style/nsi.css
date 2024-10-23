@@ -34,10 +34,16 @@ body {
     width: 610px;
     height: 370px;
     z-index: 3;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .title span {
     text-transform: uppercase;
+}
+
+.title span::after {
+    content: "*";
 }
 
 .video {    
